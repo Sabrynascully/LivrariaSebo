@@ -1,0 +1,64 @@
+<div class="container-fluid">
+    <div class="row d-flex justify-content-center ">
+
+      <div class="col-md-6" id="imagem-fundo">
+        <img src="../../assets/img/Cadastro.png" alt="" class="imagem-fundo-cadastro">
+      </div>
+
+      <div class="col-md-6 d-flex justify-content-center align-items-center">
+
+        <div class="col-md-6">
+          <br>
+          <h1 class="text-center mb-4">Faça seu cadastro</h1>
+
+          <form #usuarioForm="ngForm" (ngSubmit)="salvar(usuarioForm)">
+            <div class="row mb-4">
+              <label for="">Nome</label>
+              <input name="nome" type="text" placeholder="Nome Completo" class="form-control"  ngModel />
+            </div>
+
+
+            <div class="row mb-4">
+              <label for="">E-mail</label>
+              <input name="email" type="email" placeholder="example@gmail.com" class="form-control"  ngModel />
+            </div>
+
+            <div class="row mb-4">
+              <label for="">Senha</label>
+              <input  name="senha" type="password" placeholder="********" class="form-control"  ngModel/>
+            </div>
+
+            <div class="row mb-4">
+              <label for="">Confirmar senha</label>
+              <input  name="confirmarSenha" type="password" placeholder="********" class="form-control" ngModel />
+            </div>
+
+            <div class="row mb-4">
+                <label>CPF</label>
+                <input class="form-control" type="text" name="cpf" id="Cpf" placeholder="123.456.789-10"  ngModel >
+              </div>
+
+            <div class="row mb-4">
+              <label for="">Tipo de usuário</label>
+              <select name="select" id="tipo" class="form-control" placeholder='Selecione o tipo de usuário' ngModel >
+                <option>Selecione o tipo de usuário</option>
+                <option value="admin">Cliente</option>
+                <option value="padrao">Vendedor</option>
+              </select>
+            </div>
+
+            <div class="row d-flex justify-content-center">
+              <button class="btn btn-outline-dark w-50">Cadastrar</button>
+            </div>
+          </form>
+          <hr>
+          <p class="text-center">
+            Já possui uma conta?
+            <a class="li-ec" routerLink="/login"> Entrar</a>
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
